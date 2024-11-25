@@ -1,0 +1,9 @@
+CREATE TABLE waste_submission (
+    submission_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    waste_type VARCHAR(50),
+    waste_weight DECIMAL(5,2),
+    points_earned INT,
+    submission_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
